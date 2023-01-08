@@ -4,6 +4,7 @@ import './App.scss';
 import Home from "./pages/Home";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import Editor from "./components/Editor";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path={'/'} element={<Home/>} />
           <Route path={'/resume'} element={<>resume Page</>} />
+          <Route path={'/editor'} element={<Editor/>} />
           <Route path={'/signup'} element={<SignUp/>} />
           <Route path={'/login'} element={<Login/>} />
         </Routes>

@@ -1,0 +1,13 @@
+.editor{
+
+    .row{
+        justify-content: space-between;
+
+        .col1{
+            flex-basis: 50%;
+        }
+        .col2{
+            flex-basis: 50%;
+        }
+    }
+}

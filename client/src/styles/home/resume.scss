@@ -1,0 +1,47 @@
+.resume{
+    margin-top: 2rem;
+
+    .heading{
+        text-align: center;
+        h2{
+            position: relative;
+            font-size: 3rem;
+            color: $text-dark;
+            font-weight: 900;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                width: 20%;
+                height: 5%;
+                background: $bg-gradient;
+            }
+        }
+    }
+
+    .template{
+        width: 100%;
+        margin-top: 2rem;
+        .col{
+            width: 20%;
+            margin: auto;
+            position: relative;
+            img{
+                width: 100%;
+                // background-size: cover;
+                object-fit: cover;
+            }
+            button{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
+        }
+    }
+}

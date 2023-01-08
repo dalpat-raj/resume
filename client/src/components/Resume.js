@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import template from "./Template.json";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import t1 from "../assets/template/t1.png"
 
 const Resume = () => {
-    const [temp, setTemp] = useState("")
-    const [data, setData] = useState("")
-
-    useEffect(()=>{
-        let result = JSON.stringify(template)
-        setTemp(JSON.parse(result));
-        setData(temp.template);
-    },[])
-    console.log(Object.values(data));
+    const navigate = useNavigate()
+    
   return (
     <div className='resume'>
         <div className="heading container_fluid">
             <h2>Choose Template</h2>
         </div>
-        <div className="template">
-            {
-                
-            }
+        <div className="template row">
+            <div className="col">
+                <img src={t1} alt="" />
+                <button onClick={()=>navigate('/editor')}>use template</button>
+            </div>
         </div>
     </div>
   )
