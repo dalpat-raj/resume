@@ -1,0 +1,13 @@
+@import "./navbar.scss";
+@import "./headers.scss";
+@import "./sign_up.scss";
+@import "./resume.scss";
+
+
+.btn{
+    background: $bg-gradient;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+

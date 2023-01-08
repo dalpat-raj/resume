@@ -1,0 +1,142 @@
+@keyframes dance {
+    from {transform: translate3d(0, 0, 0);}
+    to {transform: translate3d(0, 200px, 0);}
+    // 28%  {transform: rotate(0deg);}
+    // 42% {transform: rotate(-10deg);}
+    // 56% {transform: rotate(-20deg);}
+    // 70% {transform: rotate(-10deg);}
+    // 86% {transform: rotate(0deg);}
+    // 100% {transform: rotate(10deg);}
+}
+.header{
+    .row{
+        :nth-child(1){
+            flex-basis: 50%;
+            margin-top: 30px;
+
+            p{
+                font-weight: 600;
+                padding-bottom: 1rem;
+                color: $text-dark2;
+            }
+            h2{
+                font-weight: 900;
+                font-size: 4rem;
+                color: $text-dark;
+                line-height: 4rem;
+                padding-bottom: 1rem;
+            }
+            small{
+                font-size: 1.199rem;
+                color: $text-gray;
+            }
+            h4{
+                padding-top: 1rem;
+                color: $text-dark;
+            }
+            span{
+                button{
+                    margin-top: 2rem;
+                    padding: 0.7rem 1.7rem;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    border: 0;
+                    background: $bg-gradient;
+                    border-radius: 20px;
+                    color: $text-white;
+                    cursor: pointer;
+                    &:hover{
+                        background: $bg-gradient-indigo;
+                    }
+                }
+            }
+
+        }
+
+
+        :nth-child(2){
+            flex-basis: 50%;
+
+           
+
+            img{
+                width: 80%;
+                background-size: cover;
+                animation-name: dance;
+                animation: bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);;
+                // animation-duration: 8s;
+                // animation-iteration-count: infinite;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    .header{
+
+        .row{
+            display: flex;
+            justify-content: center;
+
+
+            :nth-child(1){
+                flex-basis: 60%;
+                text-align: center;
+                p{
+                    padding-bottom: 0.5rem;
+                    color: black;
+                    font-weight: 800;
+                    font-size: 0.8rem;
+                }
+
+                h2{
+                    font-size: 2.3rem;
+                    line-height: 2rem;
+                    padding-bottom: 0.5rem;
+                }
+                small{
+                    font-size: 1rem;
+                    display: none;
+                }
+                h4{
+                    padding-top: 0.5rem;
+                }
+                span{
+                    button{
+                        margin-top: 0.5rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            :nth-child(2){
+                flex-basis: 48%;
+                margin: auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    .header{
+        .row{
+            flex-direction: column;
+
+            :nth-child(1){
+                p{
+                    font-size: 0.9rem;
+                }
+
+                span{
+                    button{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

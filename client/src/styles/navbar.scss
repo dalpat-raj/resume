@@ -1,0 +1,144 @@
+@import "./variable.scss"; 
+
+.navbar{
+    width: 100vw;
+    padding: 1rem 0;
+    box-shadow: $box-shadow;
+    .row{
+        justify-content: space-between;
+        align-items: center;
+
+        :nth-child(1){
+            h2{
+                a{
+                    font-size: 2rem;
+                    color: $text-dark;
+                }
+            }
+            a{
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: $text-dark2;
+            }
+        }
+
+        :nth-child(2){  
+            ul{
+                li{
+                    list-style-type: none;
+                    display: inline-block;
+                    margin-right: 2.5rem;
+                }
+            }
+            .button{
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 2px;
+                    height: 100%;
+                    background: rgb(110, 110, 110);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    border-radius: 50%;
+                }
+                :nth-child(1){
+                    margin-left: 2.5rem !important;
+                    background: none !important;
+                    border: 0 !important;
+                    padding: 0;
+                }
+                button{
+                    margin-left: 1.5rem;
+                    padding: 0.5rem 1.5rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    font-weight: 600;
+                    background: $bg-gradient;
+                    border: 0;
+                    border-radius: 40px;
+                    &:hover{
+                        background: $bg-gradient-indigo;
+                    }
+                }
+                :nth-child(2){
+                    color: $text-white;
+                }
+            }
+            .menu_icon{
+                font-size: 2rem;
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .navbar{
+        padding: 0.5rem 0; 
+        position: relative;
+        box-shadow: none ;
+        z-index: 8;
+        .row{
+          
+            :nth-child(2){
+                
+                    .hide_menu{
+                        width: 100vw;
+                        display: block;
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, -100%);
+                        box-shadow: $box-shadow;
+                        padding-bottom: 100px;
+                        z-index: -1;
+                        
+                    }
+                    .show_menu{
+                        width: 100vw !important;
+                        background: #fff;
+                        transition: 0.5s;
+                        display: block;
+                        position: absolute;
+                        top: 0%;
+                        left: 50%;
+                        transform: translate(-50%, 0%);
+                        box-shadow: $box-shadow;
+                        padding-top: 80px;
+                        z-index: -1 !important;
+                        
+                        li{
+                            display: block;
+                            padding: 1rem 0;
+                            text-align: center;
+                        }
+                    }
+                
+                :nth-child(2){
+                    display: none;
+                }
+            }
+            .menu_icon{
+                display: block !important;
+                cursor: pointer;
+                z-index: 7;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    .navbar{
+        .row{
+            :nth-child(1){
+                h2{
+                    a{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

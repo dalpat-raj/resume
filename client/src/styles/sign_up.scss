@@ -1,0 +1,78 @@
+.sign_up{
+    .row{
+        .col-1{
+            flex-basis: 50%;
+            img{
+                width: 100%;
+            }
+        }
+       
+        .col-2{
+            flex-basis: 50%;
+            padding-top: 4rem;
+
+            .heading{
+                text-align: center;
+                background: $bg-gradient;
+                border-radius: 20px;
+                padding: 0.5rem 0;
+                color: $text-light;
+                font-weight: 800;
+                margin-top: 2rem;
+            }
+            button{
+                width: 100%;
+                background: none;
+                border: none;
+                color: $text-light;
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+            .form{
+
+                input{
+                    width: 50%;
+                    padding: 1rem 1rem;
+                    margin-top: 2rem;
+                    border-radius: 20px;
+                    border: 0;
+                    background: $bg-blue;
+                    font-size: 1.2rem;
+                    outline: none;
+                    color: $text-dark;
+                }
+                :nth-child(3){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .sign_up{
+
+        .row{
+            display: block;
+        }
+        .col-1{
+            display: none;
+        }
+        .col-2{
+            flex-basis: 100%;
+            margin-top: -2rem !important;
+
+            .form{
+
+                input{
+                    width: 100% !important;
+                }
+            }
+        }
+
+        input{
+            width: 100%;
+        }
+
+    }
+}
