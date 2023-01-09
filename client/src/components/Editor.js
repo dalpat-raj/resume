@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import Education from "./Education"
-import Details from "./Details"
-import Skill from "./Skill"
+import Details from "./inputFields/Details.js"
+import Education from "./inputFields/Education"
+import Project from "./inputFields/Project"
+import Experience from "./inputFields/Experience"
+import Skill from "./inputFields/Skill"
+import Interest from "./inputFields/Interest"
 
 
 export class Editor extends Component {
@@ -67,23 +70,30 @@ export class Editor extends Component {
   
   nextStep = () => {
       const {step} = this.state;
-      this.setState ({
+      if(step < 6){
+        this.setState ({
           step: step + 1,
         });
+      }
     };
     
-    prevStep = () => {
+  prevStep = () => {
       const {step} = this.state;
-      this.setState ({
-        step: step - 1,
-      });
+      if(step > 1){
+        this.setState ({
+          step: step - 1,
+        });
+      }
     };
   
-
   handleChange = ({target: {value, name}}) => {
-    this.setState ({[name]: value});
+    this.setState ({[name]: value},()=>{
+      const {getData} = this.props
+        getData(this.state)
+    });
   };
-    
+
+  
 
   render () {
     const {step} = this.state;
@@ -207,17 +217,10 @@ export class Editor extends Component {
       interest5,
       interest6,
     };
+   
+
     switch (step) {
       case 1:
-        return (
-          <Education
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
-      case 2:
         return (
           <Details
             nextStep={this.nextStep}
@@ -226,7 +229,34 @@ export class Editor extends Component {
             values={values}
           />
         );
+      case 2:
+        return (
+          <Education
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 3:
+        return (
+          <Experience
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 4:
+        return (
+          <Project
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 5:
         return (
           <Skill
             nextStep={this.nextStep}
@@ -235,15 +265,18 @@ export class Editor extends Component {
             values={values}
           />
         );
+      case 6:
+        return (
+          <Interest
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       default: return <div/>;
       };
-
-    
-
   }
-  
-   
-  
   
 }
 

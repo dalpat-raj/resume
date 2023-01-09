@@ -1,13 +1,14 @@
-@import "./navbar.scss";
-@import "./editor.scss";
-@import "./education.scss";
+@import "./components/navbar.scss";
+@import "./components/main_editor.scss";
+@import "./components/editor.scss";
+@import "./components/inputFields.scss";
 @import "./home/headers.scss";
 @import "./home/sign_up.scss";
 @import "./home/resume.scss";
 
 
 .btn{
-    background: $bg-gradient;
+    // background: $bg-gradient;
     padding: 0.5rem 1rem;
     font-weight: 600;
     font-size: 1.2rem;
