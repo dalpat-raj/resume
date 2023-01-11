@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400&display=swap");
+/* font-family: 'Josefin Sans', sans-serif; */
+/* font-family: 'Spectral', serif; */
+.template3-container {
+  width: 100%;
+  border: 3px solid rgb(117, 112, 112);
+  background: white;
+  padding: 30px 50px;
+
+
+.temp3-info {
+  font-family: "Josefin Sans", sans-serif;
+}
+.temp3-heading {
+  font-weight: 400;
+  line-height: 40px;
+  font-size: 1.1rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.temp3-row-1 {
+  display: flex;
+  text-align: left;
+}
+.temp3-col-1,
+.temp3-col-2 {
+  width: 50%;
+
+  margin-top: 60px;
+}
+.temp3-contact-details p {
+  font-weight: 400;
+  font-family: "Spectral", serif;
+}
+
+.temp3-summary-details p {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+}
+
+/* row 2 */
+.temp3-row-2 {
+  display: flex;
+}
+
+.temp3-row2-col-1 {
+  width: 50%;
+  line-height: 20px;
+}
+.temp3-row2-col-2 {
+  width: 50%;
+}
+.temp3-sub-heading ,.temp3-exp-subheading  {
+  font-size: 0.8rem;
+color: rgb(141, 141, 141);
+  font-family: "Josefin Sans", sans-serif;
+}
+.temp3-sub-inner-heading {
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+.temp-3-edu-time {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9rem;
+}
+.temp3-all-skill p {
+  font-family: "Spectral", serif;
+}
+.temp3-exp-company-name {
+  font-size: 0.9rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+.temp3-exp-details li{
+  line-height: 30px;
+}
+.temp3-exp-subheading{
+  padding-top: 10px;
+}
+}

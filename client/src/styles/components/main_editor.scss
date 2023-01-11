@@ -1,10 +1,23 @@
 .main__editor{
     width: 100%;
-
-    :nth-child(1){
-        flex-basis: 50%;
+    height: 100vh;
+    // margin-top: 8rem;
+    ::-webkit-scrollbar {
+      display: none;
     }
-    :nth-child(2){
-        flex-basis: 50%;
+    
+    .col-1{
+      flex-basis: 45%;
+      background: #ffffff;
+      padding-top: 2rem;
+    }
+    .col-2{
+      flex-basis: 55%;
+      width: 100%;
+      padding: 4rem 2rem !important;
+        background: #656E83 !important;
+        overflow: scroll;
+        
+        
     }
 }

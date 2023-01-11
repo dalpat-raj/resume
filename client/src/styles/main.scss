@@ -5,12 +5,22 @@
 @import "./home/headers.scss";
 @import "./home/sign_up.scss";
 @import "./home/resume.scss";
+@import "./resume-templates/template_main.scss";
 
 
 .btn{
-    // background: $bg-gradient;
-    padding: 0.5rem 1rem;
+    background: $bg-gradient;
+    padding: 0.5rem 0;
+    color: $text-light;
+    border: none;
+    font-size: 1rem;
     font-weight: 600;
-    font-size: 1.2rem;
+    transition: 0.3s ease;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover{
+        background: $bg-gradient-indigo;
+    }
 }
 

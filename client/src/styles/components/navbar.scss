@@ -25,9 +25,10 @@
         :nth-child(2){  
             ul{
                 li{
-                    list-style-type: none;
+                    list-style: none;
                     display: inline-block;
                     margin-right: 2.5rem;
+                    border: 0;
                 }
             }
             .button{
@@ -77,10 +78,14 @@
     .navbar{
         padding: 0.5rem 0; 
         position: relative;
-        box-shadow: none ;
+        box-shadow: none;
         z-index: 8;
         .row{
-          
+            :nth-child(1){
+                h2{
+                    a{font-size: 1.5rem;}
+                }
+            }
             :nth-child(2){
                 
                     .hide_menu{

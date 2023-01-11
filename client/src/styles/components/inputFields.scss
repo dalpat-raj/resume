@@ -2,17 +2,27 @@
     :nth-child(1){
         .form{
             input{
-                width: 50%;
-                border-radius: 10px;
+                width: 47%;
                 margin: 1rem 0;
-                padding: 0.3rem 0.6rem;
+                padding: 14px 12px;
+                background: #EFF2F9;
+                caret-color: rgb(26, 145, 240);
+                outline: none;
+                border: none;
+            }
+            :nth-child(even){
+                float: right;
             }
         }
         .button{
             width: 100%;
-            display: inline-flex;
+            display: flex;
+            justify-content: space-between;
             button{
-                width: 100%;
+                width: 47%;
+            }
+            :nth-child(2){
+                float: right;
             }
         }
     }

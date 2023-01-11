@@ -22,25 +22,33 @@ class Details extends Component {
                 <h2>Details field</h2>
             </div>
             <div className="form">
-              <input type="text" placeholder='first name'
-                value={values.firstname}
-                onChange={this.props.handleChange}
-                name="firstname"
-              />
+                <input type="text" placeholder='first name'
+                  value={values.firstname}
+                  onChange={this.props.handleChange}
+                  name="firstname"
+                />
+              
               <input type="text" placeholder='last name'
                 value={values.lastname}
                 onChange={this.props.handleChange}
                 name="lastname"
               />
+
               <input type="text" placeholder='email'
                 value={values.email}
                 onChange={this.props.handleChange}
                 name="email"
               />
+
               <input type="text" placeholder='phone'
                 value={values.phone}
                 onChange={this.props.handleChange}
                 name="phone"
+              />
+              <input type="text" placeholder='address'
+                value={values.address}
+                onChange={this.props.handleChange}
+                name="address"
               />
               <input type="text" placeholder='github'
                 value={values.github}
@@ -65,8 +73,8 @@ class Details extends Component {
             </div>
 
             <div className="button">
-                <button onClick={this.back}>back</button>
-                <button onClick={this.continue}>continue</button>
+                <button className='btn' onClick={this.back}>back</button>
+                <button className='btn' onClick={this.continue}>continue</button>
             </div>
         </div>
       </div>

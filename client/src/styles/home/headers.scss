@@ -78,29 +78,32 @@
         .row{
             display: flex;
             justify-content: center;
+            margin-top: -1rem;
 
 
             :nth-child(1){
                 flex-basis: 60%;
                 text-align: center;
+                text-align: left;
                 p{
                     padding-bottom: 0.5rem;
                     color: black;
                     font-weight: 800;
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
 
                 h2{
-                    font-size: 2.3rem;
+                    font-size: 2rem;
                     line-height: 2rem;
                     padding-bottom: 0.5rem;
                 }
                 small{
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     display: none;
                 }
                 h4{
                     padding-top: 0.5rem;
+                    font-size: 1rem;
                 }
                 span{
                     button{

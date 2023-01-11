@@ -19,7 +19,7 @@ class Project extends Component {
       <div className="container_fluid input__fields">
         <div className="col">
             <div className="heading">
-                <h2>education field</h2>
+                <h2>Project Field's field</h2>
             </div>
             <div className="form">
 
