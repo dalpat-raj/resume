@@ -1,12 +1,82 @@
 import React from "react";
 
-const Temp4 = () => {
+const Temp4 = (props) => {
+  const {data, All_Heading} = props;
+
+  const {
+    // Profile-Information
+    firstname,
+    lastname,
+    currenProfession,
+    email,
+    phone,
+    address,
+    website,
+    github,
+    linkedin,
+    twitter,
+    facebook,
+    instagram,
+
+    // Education Information
+    college,
+    fromyear1,
+    toyear1,
+    qualification1,
+    description1,
+    school,
+    fromyear2,
+    toyear2,
+    qualification2,
+    description2,
+
+    // Project Information...
+    title1,
+    link1,
+    projectDescription1,
+    title2,
+    link2,
+    projectDescription2,
+    title3,
+    link3,
+    projectDescription3,
+
+    // Experience Information
+    institute1,
+    position1,
+    duration1,
+    experienceDescription1,
+    institute2,
+    position2,
+    duration2,
+    experienceDescription2,
+
+    // skill hobby Information
+    skill1,
+    skill2,
+    skill3,
+    skill4,
+    skill5,
+    skill6,
+    interest1,
+    interest2,
+    interest3,
+    interest4,
+    interest5,
+    interest6,
+
+    // summary
+    summary,
+    reference,
+  } = data;
+  
+
   return (
     <div className="template3-container">
       <div className="temp3-main-inner">
         <div className="temp3-info">
-          <h2>AVERY DAVIS</h2>
-          <p>Digital Designer</p>
+          <h2>{firstname} {lastname}</h2>
+          <p>{currenProfession}</p>
         </div>
         {
           //row-1
@@ -14,23 +84,20 @@ const Temp4 = () => {
         <div className="temp3-row-1">
           <div className="temp3-col-1">
             <div className="temp3-heading">
-              <p>CONTACT</p>
             </div>
             <div className="temp3-contact-details">
-              <p className="temp3-mobile">123-456-7890</p>
-              <p className="temp3-gmail">hello@reallygreatsite.com</p>
-              <p className="temp3-web">reallygreatsite.com</p>
+              <p className="temp3-mobile">{phone}</p>
+              <p className="temp3-gmail">{email}</p>
+              <p className="temp3-web">{website}</p>
             </div>
           </div>
           <div className="temp3-col-2">
             <div className="temp3-heading">
-              <p>SUMMARY</p>
+              <h4 ref={href} className="h4">SUMMARY</h4>
             </div>
             <div className="temp3-summary-details">
               <p className="temp3-summary-ph">
-                A passionate digital designer with over 10 years experience in
-                online content, design and development. Known for my hardworking
-                ethic and exceptional people skills.{" "}
+                {summary}{" "}
               </p>
             </div>
           </div>
@@ -46,29 +113,29 @@ const Temp4 = () => {
           <div className="temp3-row2-col-1">
             <div className="temp3-row-2-education">
               <div className="temp3-heading">
-                <p>EDUCATION</p>
+                <h4 ref={href} className="h4">EDUCATION</h4>
               </div>
-              <p className="temp3-sub-heading">EDUCATIONAL QUALIFICATION</p>
-              <p className="temp3-sub-inner-heading">University</p>
-              <p className="temp-3-edu-time">2017-2020</p>
+              <p className="temp3-sub-heading">{qualification1}</p>
+              <p className="temp3-sub-inner-heading">{college}</p>
+              <p className="temp-3-edu-time">{fromyear1} - {toyear1}</p>
 
               <br />
 
-              <p className="temp3-sub-heading">EDUCATIONAL QUALIFICATION</p>
-              <p className="temp3-sub-inner-heading">High School</p>
-              <p className="temp-3-edu-time">2010 - 2016</p>
+              <p className="temp3-sub-heading">{qualification2}</p>
+              <p className="temp3-sub-inner-heading">{school}</p>
+              <p className="temp-3-edu-time">{fromyear2} - {toyear2}</p>
             </div>
             <br />
             <div className="temp3-row-2-skills">
               <div className="temp3-heading">
-                <p>SKILLS</p>
+                <h4 className="h4">SKILLS</h4>
               </div>
               <div className="temp3-all-skill">
-                <p>Content Writing</p>
+                <p>{skill1}</p>
 
-                <p>Web Design</p>
-                <p>Illustration</p>
-                <p>Graphic Design</p>
+                <p>{skill2}</p>
+                <p>{skill3}</p>
+                <p>{skill4}</p>
               </div>
             </div>
 
@@ -76,10 +143,10 @@ const Temp4 = () => {
 
             <div className="temp3-row-2-reference">
               <div className="temp3-heading">
-                <p>REFERENCE</p>
+                <h4 className="h4">REFERENCE</h4>
               </div>
               <div>
-                <p>Provided upon request.</p>
+                <p>{reference}</p>
               </div>
             </div>
           </div>
@@ -87,40 +154,25 @@ const Temp4 = () => {
           <div className="temp3-row2-col-2">
             <div className="temp3-row2-workexp">
               <div className="temp3-heading">
-                <p>WORK-EXPERIENCE</p>
+                <h4 className="h4">WORK-EXPERIENCE</h4>
               </div>
-              <p className="temp3-exp-subheading">WEB DESIGNER</p> <br />
-              <p className="temp3-exp-company-name">Really Great Company</p>
-              <p className="temp3-exp-time">2020 - Present</p>
+              <p className="temp3-exp-subheading">{position1}</p> <br />
+              <p className="temp3-exp-company-name">{institute1}</p>
+              <p className="temp3-exp-time">{duration1}</p>
               <p className="temp3-exp-details">
-                <li>Website design and development </li>
-                <li>Delivered 20 websites from concept to completion </li>
-                <li>Developed visual style guide</li>
+                <li>{experienceDescription1}</li>
               </p>
             </div>
 
             <div className="temp3-row2-workexp">
-              <p className="temp3-exp-subheading">WEB DEVELOPER</p> <br />
-              <p className="temp3-exp-company-name">Really Great Company</p>
-              <p className="temp3-exp-time">2014 - 2016</p>
+              <p className="temp3-exp-subheading">{position2}</p> <br />
+              <p className="temp3-exp-company-name">{institute2}</p>
+              <p className="temp3-exp-time">{duration2}</p>
               <p className="temp3-exp-details">
-                <li>Database administration and IT management </li>
-                <li>Website back ups and server migration</li>
-                <li>Front end and back end development</li>
+                <li>{experienceDescription2}</li>
               </p>
             </div>
             <br/>
-
-            <div className="temp3-row2-workexp">
-              <p className="temp3-exp-subheading">CONTENT MANAGER</p> <br />
-              <p className="temp3-exp-company-name">Really Great Company</p>
-              <p className="temp3-exp-time">2010 - 2016</p>
-              <p className="temp3-exp-details">
-                <li>Content writing and editing </li>
-                <li>Developed and maintained editorial content plan </li>
-                <li>Created and trained staff on editorial style guide</li>
-              </p>
-            </div>
           </div>
         </div>
       </div>

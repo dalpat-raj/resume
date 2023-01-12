@@ -10,6 +10,11 @@ const Pre = (props) => {
   const {template_Id, data} = props;
   const [temp_Id, setTemp_Id] = useState(JSON.parse(template_Id))
 
+
+  const All_Heading=()=>{
+    console.log("pre");
+  }
+
   switch (temp_Id) {
     case 1:
       return <Temp1 data={data} />
@@ -18,7 +23,7 @@ const Pre = (props) => {
     case 3:
       return <Temp3 data={data} />
     case 4:
-      return <Temp4 data={data} />
+      return <Temp4 data={data} All_Heading={All_Heading} />
     case 5:
       return <Temp5 data={data} />
     case 6:

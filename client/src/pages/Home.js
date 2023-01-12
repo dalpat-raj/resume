@@ -4,10 +4,10 @@ import Resume from '../components/Resume'
 
 const Home = () => {
   return (
-    <div className="">
+    <>
         <Header/>
         <Resume/>
-    </div>
+    </>
   )
 }
 

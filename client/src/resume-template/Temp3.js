@@ -1,6 +1,75 @@
 import React from "react";
 
-const Temp3 = () => {
+const Temp3 = (props) => {
+
+  const {
+    // Profile-Information
+    firstname,
+    lastname,
+    currenProfession,
+    email,
+    phone,
+    address,
+    website,
+    github,
+    linkedin,
+    twitter,
+    facebook,
+    instagram,
+
+    // Education Information
+    college,
+    fromyear1,
+    toyear1,
+    qualification1,
+    description1,
+    school,
+    fromyear2,
+    toyear2,
+    qualification2,
+    description2,
+
+    // Project Information...
+    title1,
+    link1,
+    projectDescription1,
+    title2,
+    link2,
+    projectDescription2,
+    title3,
+    link3,
+    projectDescription3,
+
+    // Experience Information
+    institute1,
+    position1,
+    duration1,
+    experienceDescription1,
+    institute2,
+    position2,
+    duration2,
+    experienceDescription2,
+
+    // skill hobby Information
+    skill1,
+    skill2,
+    skill3,
+    skill4,
+    skill5,
+    skill6,
+    interest1,
+    interest2,
+    interest3,
+    interest4,
+    interest5,
+    interest6,
+
+    // summary
+    summary,
+    reference,
+  } = props.data;
+
+
   return (
     <div className="Template2-container">
       {
@@ -8,13 +77,13 @@ const Temp3 = () => {
       }
       <div className="temp2-info">
         <h2>
-          <span className="fname">PAULA</span> <span>WILSON</span>
+          <span className="fname">{firstname}</span> <span>{lastname}</span>
         </h2>
-        <p>Junior Data Analyst</p>
+        <p>{currenProfession}</p>
         <p>
-          <span className="temp20address">123 Anywhere St., Any City</span>|
-          <span className="temp2-phone">+123-456-7890</span>|
-          <span className="temp2-email">hello@reallygreatsite.com</span>
+          <span className="temp20address">{address}</span> |&nbsp;
+          <span className="temp2-phone">{phone}</span> |&nbsp;
+          <span className="temp2-email">{email}</span>
         </p>
       </div>
       <hr className="line" />
@@ -25,12 +94,7 @@ const Temp3 = () => {
       <div className="temp2-summary">
         <p className="temp2-haeding">PROFESSIONAL SUMMARY</p>
         <p className="summary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          molestie orci ac nulla dapibus, eget suscipit felis porta. Suspendisse
-          fringilla et libero nec commodo. In hac habitasse platea dictumst. Ut
-          dictum faucibus urna id varius. Fusce ac felis ut diam elementum
-          bibendum ac eu arcu. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos.
+          {/* {summary} */}
         </p>
       </div>
       <hr />
@@ -44,20 +108,18 @@ const Temp3 = () => {
           <p className="temp2-haeding">PROFESSIONAL SKILL</p>
 
           <div className="all-pro-skill">
-            <span className="skill">your skill here</span>{" "}
-            <span className="skill">your skill here</span>
-            <span className="skill">your skill here</span>{" "}
-            <span className="skill">your skill here</span>
+            <span className="skill">{skill1}</span>{" "}
+            <span className="skill">{skill2}</span>
+            <span className="skill">{skill3}</span>{" "}
           </div>
         </div>
         <div className="temp-2-tech-skill">
           <p className="temp2-haeding">TECHNICAL SKILL</p>
 
           <div className="all-tech-skill">
-            <span className="skill">your skill here</span>{" "}
-            <span className="skill">your skill here</span>
-            <span className="skill">your skill here</span>{" "}
-            <span className="skill">your skill here</span>
+            <span className="skill">{skill4}</span>{" "}
+            <span className="skill">{skill5}</span>
+            <span className="skill">{skill6}</span>{" "}
           </div>
         </div>
       </div>
@@ -67,32 +129,29 @@ const Temp3 = () => {
       }
       <div className="temp2-education">
         <p className="temp2-haeding">EDUCATION</p>
-
         <div className="temp2-inner-education">
           <div className="temp2-education1">
             <div className="temp2-education-details ">
               <h3>Educational Qualification/ Degree, Major</h3>
-              <span>2000 - 2000</span>
+              <span>{fromyear1} - {toyear1}</span>
             </div>
             <div className="education-details">
-              <p>University Name, Any City</p>
+              <p>{college}</p>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              molestie orci ac nulla dapibus, eget suscipit felis porta.
+              {description1}
             </p>
           </div>
           <div className="temp2-education1">
             <div className="temp2-education-details ">
               <h3>Educational Qualification/ Degree, Major</h3>
-              <span>2000 - 2000</span>
+              <span>{fromyear2} - {toyear2}</span>
             </div>
             <div className="education-details">
-              <p>University Name, Any City</p>
+              <p>{school}</p>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              molestie orci ac nulla dapibus, eget suscipit felis porta.
+              {description2}
             </p>
           </div>
         </div>
@@ -109,20 +168,16 @@ const Temp3 = () => {
   <div className="temp2-exp1">
   
   <div className="temp2-exp-details ">
-  <h3>Company Name, Any City</h3>
-  <span>Month, Year - Month, Year</span>
+  <h3>{institute1}</h3>
+  <span>{duration1}</span>
 </div>
-
 <div className="temp2-exp-details">
-<p>Company Name, Any City</p>
+<p>{position1}</p>
 </div>
 
 <div className="temp2-exp-points">
 <ul>
-<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-<li> Praesent molestie orci ac nulla dapibus, eget suscipit felis porta.</li>
-<li>Suspendisse fringilla et libero nec commodo. In hac habitasse platea dictumst.</li>
-
+<li>{experienceDescription1}</li>
 </ul>
 
 </div>
@@ -132,19 +187,13 @@ const Temp3 = () => {
   <div className="temp2-exp1">
   
   <div className="temp2-exp-details ">
-  <h3>Company Name, Any City</h3>
-  <span>Month, Year - Month, Year</span>
-</div>
-
-<div className="temp2-exp-details">
-<p>Company Name, Any City</p>
+  <h3>{institute2}</h3>
+  <span>{duration2}</span>
 </div>
 
 <div className="temp2-exp-points">
 <ul>
-<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-<li> Praesent molestie orci ac nulla dapibus, eget suscipit felis porta.</li>
-<li>Suspendisse fringilla et libero nec commodo. In hac habitasse platea dictumst.</li>
+
 
 </ul>
 

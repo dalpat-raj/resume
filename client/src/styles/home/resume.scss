@@ -1,5 +1,5 @@
 .resume{
-    margin-top: 2rem;
+    margin-top: 4rem !important;
 
     .heading{
         text-align: center;
@@ -12,7 +12,7 @@
             &::after{
                 content: "";
                 position: absolute;
-                top: 100%;
+                top: 110%;
                 left: 50%;
                 transform: translate(-50%, 50%);
                 width: 20%;
@@ -22,14 +22,36 @@
         }
     }
 
+    .all__Category__btn{
+        width: 60%;
+        margin: 2rem auto;
+
+        :nth-child(even){
+            margin: 0 1rem;
+        }
+
+        .category__btn{
+            width: 18%;
+            display: inline-block;
+        }
+
+        button{
+            width: 100%;
+            padding: 1rem 1rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            color: $text-gray;
+        }
+    }
+
     .template{
-        // width: 100%;
-        margin-top: 2rem;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         .col{
-            width: 20%;
-            margin: 1rem;
+            width: 23%;
+            margin: 1rem 0;
             position: relative;
             box-shadow: $box-shadow;
             transition: 0.3s ease;
@@ -49,6 +71,87 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    .resume{
+
+        .heading{
+            h2{
+                font-size: 1.8rem;
+            }
+        }
+        .all__Category__btn{
+            width: 100%;
+            margin: 2rem auto;
+    
+            :nth-child(even){
+                margin: 0 0.7rem;
+            }
+    
+            .category__btn{
+                display: inline-block;
+            }
+    
+            button{
+                padding: 0.6rem 0.4rem;
+                font-size: 0.9rem;
+            }
+        }
+        .template{
+            .col{
+                width: 42%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    .resume{
+
+        .heading{
+            h2{
+                font-size: 1.8rem;
+            }
+        }
+        .all__Category__btn{
+            margin: 1.5rem auto;
+            margin-bottom: 1rem;
+            
+            :nth-child(even){
+                margin: 0 0.5rem;
+            }
+    
+            .category__btn{
+                width: 18%;
+                display: inline-block;
+            }
+    
+            button{
+                padding: 0.6rem 0.1rem;
+                font-size: 0.9rem;
+            }
+        }
+        .template{
+            .col{
+                width: 100%;
+                border: 1px solid $text-dark;
+                :hover{
+                    border: 0;
+                }
+
+
+                button{
+                    width: 50%;
+                    position: absolute;
+                    border-radius: 0;
+                    top: 90%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
     }

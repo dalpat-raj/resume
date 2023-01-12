@@ -1,23 +1,90 @@
 import React from 'react'
 
-const Temp1 = () => {
+const Temp1 = (props) => {
+
+	const {
+		// Profile-Information
+		firstname,
+		lastname,
+		email,
+		phone,
+		address,
+		website,
+		github,
+		linkedin,
+		twitter,
+		facebook,
+		instagram,
+	
+		// Education Information
+		college,
+		fromyear1,
+		toyear1,
+		qualification1,
+		description1,
+		school,
+		fromyear2,
+		toyear2,
+		qualification2,
+		description2,
+	
+		// Project Information...
+		title1,
+		link1,
+		projectDescription1,
+		title2,
+		link2,
+		projectDescription2,
+		title3,
+		link3,
+		projectDescription3,
+	
+		// Experience Information
+		institute1,
+		position1,
+		duration1,
+		experienceDescription1,
+		institute2,
+		position2,
+		duration2,
+		experienceDescription2,
+	
+		// skill hobby Information
+		skill1,
+		skill2,
+		skill3,
+		skill4,
+		skill5,
+		skill6,
+		interest1,
+		interest2,
+		interest3,
+		interest4,
+		interest5,
+		interest6,
+
+		// summary
+		summary,
+		reference,
+	  } = props.data;
+	
+
   return (
     <>
     <div id="doc2" className="yui-t7">
 	<div id="inner">
-	
 		<div id="hd">
 			<div className="yui-gc">
 				<div className="yui-u first">
-					<h1>Jonathan Doe</h1>
+					<h1>{firstname} {lastname}</h1>
 					<h2>Web Designer, Director</h2>
 				</div>
 
 				<div className="yui-u">
 					<div className="contact-info">
 						<h3><small>Download PDF</small></h3>
-						<h3><small>name@yourdomain.com</small></h3>
-						<h3>(313) - 867-5309</h3>
+						<h3><small>{email}</small></h3>
+						<h3>{phone}</h3>
 					</div>
 				</div>
 			</div>

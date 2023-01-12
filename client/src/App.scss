@@ -8,7 +8,8 @@
 }
 body{
   background-size: cover;
-  background:  $bg-gradient-peach;
+  overflow-x: hidden;
+  // background:  $bg-gradient-peach;
 }
 .row{
   display: flex;
@@ -22,3 +23,15 @@ body{
   margin: auto;
 }
 
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: $text-dark;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track{
+  // background: #000000;
+  border: 1px solid $text-dark2;
+}

@@ -1,18 +1,65 @@
 .input__fields{
+    .heading{
+        text-align: center;
+        h2{
+            color: $text-dark !important;
+            font-weight: 900;
+            font-size: 2rem;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                width: 20%;
+                height: 5%;
+                background: $bg-gradient;
+            }
+        }
+    }
     :nth-child(1){
         .form{
-            input{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 1.6rem;
+
+
+            width: 100%;
+            .input__box{
                 width: 47%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
                 margin: 1rem 0;
+
+                label{
+                    font-size: 0.8rem;
+                    padding-bottom: 0.5rem;
+                    color: $text-gray;
+                }
+
+            }
+            input{
+                // width: 100%;
                 padding: 14px 12px;
                 background: #EFF2F9;
-                caret-color: rgb(26, 145, 240);
                 outline: none;
                 border: none;
+                color: #000000;
             }
-            :nth-child(even){
-                float: right;
+            textarea{
+                width: 45vw;
+                height: 20vh;
+                background: #EFF2F9;
+                outline: none;
+                border: none;
+                color: #000000;
             }
+            // :nth-child(even){
+            //     float: right;
+            // }
         }
         .button{
             width: 100%;
@@ -27,4 +74,41 @@
         }
     }
     
+}
+
+@media only screen and (max-width: 768px){
+
+    .form{
+        .input__box{
+            // width: 100% !important;
+
+            textarea{
+                width: 95vw !important;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    .form{
+        flex-direction: column;
+        .input__box{
+            width: 100% !important;
+
+            label{
+                font-size: 1rem !important;
+                padding-bottom: 0.2rem !important;
+                color: $text-dark !important;
+            }
+            
+            input{
+                width: 100%;
+            }
+
+            textarea{
+                width: 100%;
+            }
+        }
+    }
 }

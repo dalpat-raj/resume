@@ -6,6 +6,7 @@ const Temp2 = (props) => {
     // Profile-Information
     firstname,
     lastname,
+    currenProfession,
     email,
     phone,
     address,
@@ -62,6 +63,10 @@ const Temp2 = (props) => {
     interest4,
     interest5,
     interest6,
+
+    // summary
+    summary,
+    reference,
   } = props.data;
 
 
