@@ -34,7 +34,7 @@ class Reference extends Component {
 
             <div className="button">
                 <button className='btn' onClick={this.back}>back</button>
-                <button className='btn' onClick={this.continue}>continue</button>
+                <button className='btn' onClick={this.continue}>Download Resume</button>
             </div>
         </div>
       </div>

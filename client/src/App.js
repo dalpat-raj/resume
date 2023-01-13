@@ -7,6 +7,7 @@ import Login from "./components/Login";
 // import Editor from "./components/Editor";
 import MainEditor from "./components/MainEditor";
 import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path={'/signup'} element={<SignUp/>} />
           <Route path={'/login'} element={<Login/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

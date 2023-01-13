@@ -2,7 +2,9 @@
     width: 100vw;
     height: 100vh;
     // margin-top: 8rem;
-    background: #656E83 !important;
+    background: #656E83 
+    !important;
+    z-index: -1;
     ::-webkit-scrollbar {
       display: none;
     }
@@ -13,13 +15,17 @@
       padding-top: 2rem;
     }
     .col-2{
+      position: relative;
       flex-basis: 50%;
       width: 100%;
       margin: 0 2rem;
       margin-top: 4rem;
-        overflow: scroll;   
+      overflow: scroll; 
+        
     }
 }
+
+
 
 @media only screen and (max-width:768px){
   .main__editor{

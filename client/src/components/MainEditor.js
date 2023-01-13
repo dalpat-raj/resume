@@ -10,6 +10,8 @@ const MainEditor = () => {
   const [stateData, setStateData] = useState([]);
   const getData = (data) => setStateData(data);
 
+ 
+
   return (
     <div className="main__editor row">
       <div className="col-1">

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Temp3 = (props) => {
+  const {data} = props;
 
   const {
     // Profile-Information
@@ -67,8 +68,7 @@ const Temp3 = (props) => {
     // summary
     summary,
     reference,
-  } = props.data;
-
+  } = data;
 
   return (
     <div className="Template2-container">

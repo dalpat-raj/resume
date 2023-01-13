@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Temp1 = (props) => {
+	const {data} = props;
 
 	const {
 		// Profile-Information
@@ -66,12 +67,12 @@ const Temp1 = (props) => {
 		// summary
 		summary,
 		reference,
-	  } = props.data;
+	  } = data;
+
 	
 
   return (
-    <>
-    <div id="doc2" className="yui-t7">
+    <div className="yui-t7">
 	<div id="inner">
 		<div id="hd">
 			<div className="yui-gc">
@@ -212,13 +213,9 @@ const Temp1 = (props) => {
 		<div id="ft">
 			<p>Jonathan Doe &mdash; <small>name@yourdomain.com</small> &mdash; (313) - 867-5309</p>
 		</div>
-
 	</div>
-
-
 </div>
 
-    </>
   )
 }
 
